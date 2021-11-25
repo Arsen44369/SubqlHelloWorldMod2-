@@ -1,0 +1,74 @@
+0 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+1 info using npm@8.1.2
+2 info using node@v17.1.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:/usr/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:/root/SubQ/tutorials-account-balances/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:/root/.npmrc Completed in 1ms
+12 timing config:load:user Completed in 1ms
+13 timing config:load:file:/usr/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:validate Completed in 0ms
+16 timing config:load:credentials Completed in 2ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 11ms
+19 timing npm:load:configload Completed in 11ms
+20 timing npm:load:setTitle Completed in 1ms
+21 timing npm:load:setupLog Completed in 0ms
+22 timing config:load:flatten Completed in 4ms
+23 timing npm:load:cleanupLog Completed in 3ms
+24 timing npm:load:configScope Completed in 0ms
+25 timing npm:load:projectScope Completed in 0ms
+26 timing npm:load Completed in 22ms
+27 timing arborist:ctor Completed in 2ms
+28 timing arborist:ctor Completed in 1ms
+29 timing idealTree:init Completed in 17ms
+30 timing idealTree:userRequests Completed in 1ms
+31 silly idealTree buildDeps
+32 silly fetch manifest @polkadot/api@^5.7.1
+33 http fetch GET 200 https://registry.npmjs.org/@polkadot%2fapi 2110ms (cache miss)
+34 silly fetch manifest @subql/types@latest
+35 http fetch GET 200 https://registry.npmjs.org/@subql%2ftypes 1753ms (cache miss)
+36 silly fetch manifest @polkadot/api@^6
+37 timing idealTree Completed in 3999ms
+38 timing command:install Completed in 4178ms
+39 notice New [32mpatch[39m version of npm available! [31m8.1.2[39m -> [32m8.1.4[39m
+39 notice Changelog: [36mhttps://github.com/npm/cli/releases/tag/v8.1.4[39m
+39 notice Run [32mnpm install -g npm@8.1.4[39m to update!
+40 verbose stack Error: unable to resolve dependency tree
+40 verbose stack     at Arborist.[failPeerConflict] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1356:25)
+40 verbose stack     at Arborist.[loadPeerSet] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1322:34)
+40 verbose stack     at async Arborist.[buildDepStep] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:930:11)
+40 verbose stack     at async Arborist.buildIdealTree (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:216:7)
+40 verbose stack     at async Promise.all (index 1)
+40 verbose stack     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:149:5)
+40 verbose stack     at async Install.install (/usr/lib/node_modules/npm/lib/install.js:170:5)
+41 verbose cwd /root/SubQ/tutorials-account-balances
+42 verbose Linux 5.4.0-90-generic
+43 verbose argv "/usr/bin/node" "/usr/bin/npm" "install"
+44 verbose node v17.1.0
+45 verbose npm  v8.1.2
+46 error code ERESOLVE
+47 error ERESOLVE unable to resolve dependency tree
+48 error
+49 error While resolving: [1maccount-balance[22m@[1m1.0.0[22m
+49 error Found: [1m@polkadot/api[22m@[1m5.9.1[22m[2m[22m
+49 error [2mnode_modules/@polkadot/api[22m
+49 error   [33mdev[39m [1m@polkadot/api[22m@"[1m^5.7.1[22m" from the root project
+49 error
+49 error Could not resolve dependency:
+49 error [35mpeer[39m [1m@polkadot/api[22m@"[1m^6[22m" from [1m@subql/types[22m@[1m0.10.1[22m[2m[22m
+49 error [2mnode_modules/@subql/types[22m
+49 error   [33mdev[39m [1m@subql/types[22m@"[1mlatest[22m" from the root project
+49 error
+49 error Fix the upstream dependency conflict, or retry
+49 error this command with --force, or --legacy-peer-deps
+49 error to accept an incorrect (and potentially broken) dependency resolution.
+49 error
+49 error See /root/.npm/eresolve-report.txt for a full report.
+50 verbose exit 1
